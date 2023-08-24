@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cirle Skill Bar</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <div class="skill-bar">
+        <div class="outer-cirlce">
+            <div class="inner-cirlce">
+                <div id="value">50%</div>
+            </div>
+        </div>
+        <svg width="160px" height="160px">
+            <defs>
+                <linearGradient id="linear">
+                    <stop offset="0%" stop-color="#05a" />
+                    <stop offset="100%" stop-color="#0a5" />
+                </linearGradient>
+            </defs>
+            <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+        </svg>
+    </div>
+</body>
+
+</html>
