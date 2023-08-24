@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.hero{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    color: #fff;
+}
+
+.container {
+    position: absolute;
+    width: 800px;
+    height: 180px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.clock {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(235, 0, 255, 0.11);
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    left: -50px;
+    top: -50px;
+    background: #f41b75;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    right: -30px;
+    bottom: -50px;
+    background: #419aff;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.clock span{
+    position: relative;
+    display: inline-block;
+    width: 110px;
+    font-size: 80px;
+    text-align: center;
+}
+
+.clock span::after{
+    position: absolute;
+    font-size: 16px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.clock span#hrs::after{
+    content: 'HOURS';
+}
+
+.clock span#min::after{
+    content: 'MINS';
+}
+
+.clock span#sec::after{
+    content: 'SEC';
+}
